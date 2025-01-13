@@ -18,7 +18,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: d1e1
-          setup-command: npm install
+          setup-command: npm install && npm run db:reset && db:seed
           command: npm run test:d1e1
           timeout: 10
           max-score: 1
